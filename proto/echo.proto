@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package echo;
+
+option go_package = "github.com/cbosss/grpc-performance/proto";
+
+service Echoer {
+  rpc Echo (EchoRequest) returns (EchoResponse) {}
+}
+
+message EchoRequest {
+  string msg = 1;
+}
+
+message EchoResponse {
+  string msg = 1;
+}

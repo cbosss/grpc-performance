@@ -1,0 +1,25 @@
+[package]
+name = "grpc-performance"
+version = "0.1.0"
+authors = ["Cole Bosmann <cole@netlify.com>"]
+edition = "2018"
+
+[dependencies]
+tokio = { version = "1.6.0", features = ["full"] }
+tonic = "0.4.3"
+tokio-stream = { version = "0.1.6", features = ["net"] }
+prost = "0.7.0"
+tonic-reflection = "0.1.0"
+
+[build-dependencies]
+tonic-build = "0.4.2"
+
+# server binary
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+# client binary
+[[bin]]
+name = "client"
+path = "src/client.rs"
